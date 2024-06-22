@@ -294,100 +294,117 @@ return [
     */
 
     'menu' => [
-        // Navbar items:
-        [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type' => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
-        // Sidebar items:
-        [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
+    [
+        'text' => 'Dashboard',
+        'url'  => 'dashboard',
+        'icon' => 'fas fa-fw fa-tachometer-alt',
+    ],
+    [
+        'text'    => 'Management',
+        'icon'    => 'fas fa-fw fa-folder',
+        'submenu' => [
+            [
+                'text' => 'Members',
+                'url'  => 'members',
+                'icon' => 'fas fa-fw fa-users',
+            ],
+            [
+                'text' => 'Subscriptions',
+                'url'  => 'subscriptions',
+                'icon' => 'fas fa-fw fa-receipt',
+            ],
+            [
+                'text' => 'Payments',
+                'url'  => 'payments',
+                'icon' => 'fas fa-fw fa-dollar-sign',
+            ],
+            [
+                'text' => 'Classes',
+                'url'  => 'classes',
+                'icon' => 'fas fa-fw fa-calendar-alt',
+            ],
+            [
+                'text' => 'Instructors',
+                'url'  => 'instructors',
+                'icon' => 'fas fa-fw fa-chalkboard-teacher',
             ],
         ],
-        ['header' => 'labels'],
-        [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
-        ],
-        [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
-        ],
-        [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
+    ],
+    [
+        'text' => 'Equipment',
+        'url'  => 'equipment',
+        'icon' => 'fas fa-fw fa-dumbbell',
+    ],
+    [
+        'text' => 'Events',
+        'url'  => 'events',
+        'icon' => 'fas fa-fw fa-calendar-check',
+    ],
+    [
+        'text'    => 'Community',
+        'icon'    => 'fas fa-fw fa-users',
+        'submenu' => [
+            [
+                'text' => 'Member Forums',
+                'url'  => 'forums',
+                'icon' => 'fas fa-fw fa-comments',
+            ],
+            [
+                'text' => 'Social Events',
+                'url'  => 'social-events',
+                'icon' => 'fas fa-fw fa-users',
+            ],
         ],
     ],
+    [
+        'text'    => 'Marketing',
+        'icon'    => 'fas fa-fw fa-bullhorn',
+        'submenu' => [
+            [
+                'text' => 'Campaigns',
+                'url'  => 'marketing/campaigns',
+                'icon' => 'fas fa-fw fa-mail-bulk',
+            ],
+            [
+                'text' => 'Promotions',
+                'url'  => 'marketing/promotions',
+                'icon' => 'fas fa-fw fa-tags',
+            ],
+        ],
+    ],
+    [
+        'text'    => 'Reports',
+        'icon'    => 'fas fa-fw fa-chart-line',
+        'submenu' => [
+            [
+                'text' => 'Attendance',
+                'url'  => 'reports/attendance',
+                'icon' => 'fas fa-fw fa-user-check',
+            ],
+            [
+                'text' => 'Revenue',
+                'url'  => 'reports/revenue',
+                'icon' => 'fas fa-fw fa-wallet',
+            ],
+            [
+                'text' => 'Equipment Usage',
+                'url'  => 'reports/equipment_usage',
+                'icon' => 'fas fa-fw fa-tools',
+            ],
+        ],
+    ],
+    [
+        'text'    => 'Settings',
+        'icon'    => 'fas fa-fw fa-cogs',
+        'submenu' => [
+            [
+                'text' => 'General Settings',
+                'url'  => 'settings/general',
+                'icon' => 'fas fa-fw fa-wrench',
+            ]
+        ],
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------
@@ -541,5 +558,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];
