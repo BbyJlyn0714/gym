@@ -305,7 +305,7 @@ return [
         'submenu' => [
             [
                 'text' => 'Members',
-                'url'  => 'members',
+                'url'  => 'admin/members',
                 'icon' => 'fas fa-fw fa-users',
             ],
             [
@@ -442,7 +442,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',

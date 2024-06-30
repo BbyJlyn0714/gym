@@ -20,4 +20,14 @@ class Member extends Model
     public function classes() {
         return $this->belongsToMany(GymClass::class, 'class_registrations');
     }
+
+    /**
+     * Get the full name of the member.
+     *
+     * @return string
+     */
+    public function getFullNameAttribute()
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
 }
